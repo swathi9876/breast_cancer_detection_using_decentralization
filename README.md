@@ -71,30 +71,7 @@ Accuracy measured across runs with 2 to 10 clients.
 ### Observations
 - Results varied strongly with the number of clients, especially on non-IID data.
 - FedProx did not consistently beat FedAvg here, and it was less stable on non-IID splits.
-- The flat ~0.63 SVM accuracy matches the share of the majority (benign) class, so those runs likely predict a single class. Fixing this is the top item on the roadmap.
 
-## Limitations
-
-- Small dataset (569 rows), so results are noisy and may not generalize.
-- Federated training is simulated on one machine: no real networking, encryption or secure aggregation.
-- Only accuracy is reported so far. For medical screening, sensitivity, specificity, F1 and AUC matter more.
-- Hyperparameters (learning rate, local epochs, batch size, FedProx μ) were not exhaustively tuned.
-
-## Roadmap
-
-- [ ] Fix the SVM single-class issue (feature scaling, class balancing, learning-rate tuning)
-- [ ] Use stratified train/test splits and a held-out global test set
-- [ ] Report sensitivity, specificity, precision, recall, F1, ROC-AUC and confusion matrices
-- [ ] Add a centralized baseline for a fair comparison
-- [ ] Run multiple random seeds and report mean ± std
-- [ ] Sweep FedProx μ and the degree of non-IID skew (for example, Dirichlet partitioning)
-- [ ] Add differential privacy / secure aggregation
-- [ ] Try larger or imaging datasets (BreakHis, CBIS-DDSM)
-- [ ] Add a `requirements.txt` and a `data/` folder
-
-## Publication
-
-*Breast cancer detection using decentralized Machine Learning.* A. More, R. Singh, M. Sirwani, S. Babaram, A. Bundele. Bulletin for Technology and History, Vol. 24, Issue 2, 2024, pp. 29–31.
 
 ## Team
 
@@ -106,10 +83,5 @@ Ankita More · Rajat Singh · Mehek Sirwani · Swathi Babaram
 
 1. T. Li et al., *Federated Learning: Challenges, Methods, and Future Directions*, IEEE Signal Processing Magazine, 2020.
 2. Q. Yang et al., *Federated Machine Learning: Concept and Applications*, ACM TIST, 2019.
-3. N. Rieke et al., *The Future of Digital Health with Federated Learning*, npj Digital Medicine, 2020.
-4. H. R. Roth et al., *Federated Learning for Breast Density Classification: A Real-World Implementation*, 2020.
-5. T. Li et al., *Federated Optimization in Heterogeneous Networks* (FedProx), MLSys, 2020.
 
-## License
 
-MIT
