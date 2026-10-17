@@ -47,9 +47,7 @@ In centralized ML, patient records are collected in one place, which creates pri
 2. Run all cells (`Runtime → Run all`).
 3. Change the number of clients (2 to 10), number of rounds and learning rate in the config cell to reproduce the experiments.
 
-## Dataset
 
-Breast cancer dataset from Kaggle, `breastcancer.csv`: 569 samples, binary label (benign or malignant). It is a small public dataset used only for proof-of-concept experiments, not real clinical data.
 
 ## Tech stack
 
