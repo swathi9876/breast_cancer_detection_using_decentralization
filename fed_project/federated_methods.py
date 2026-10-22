@@ -7,7 +7,7 @@ def create_federated_dataset(client_data):
                                'y': torch.tensor(y, dtype=torch.long)})
     return federated_data
 
-# Define the FedAvg algorithm
+# Defining the FedAvg algorithm
 def federated_average(model, client_models):
     averaged_state_dict = {}
     for i, client_state_dict in enumerate(client_models):
@@ -19,7 +19,8 @@ def federated_average(model, client_models):
     for key in averaged_state_dict:
         averaged_state_dict[key] /= len(client_models)
     return averaged_state_dict
-
+    
+# Defining FedProx Algorithm
 def fedprox(model, client_models):
     averaged_state_dict = {}
     for i, client_state_dict in enumerate(client_models):
