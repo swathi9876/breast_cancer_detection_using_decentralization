@@ -14,7 +14,7 @@ def preprocess_data(data_path):
     label_encoder = LabelEncoder()
     df['diagnosis'] = label_encoder.fit_transform(df['diagnosis'])
 
-    # Drop the first column (such as ID column)
+    # Dropping ID column
     df = df.drop(df.columns[0], axis=1)
 
     # Extract features and labels
