@@ -11,9 +11,9 @@ from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import precision_score, recall_score, f1_score
-# Path to the CSV stored on Google Drive (upload it once to this folder)
+
 DATA_PATH = "/content/drive/MyDrive/fed_project/ank.csv"
 
 
 
-# -------------------------------------------
+
