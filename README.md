@@ -1,4 +1,4 @@
-# Fedprox_ml_breast_cancer_detection
+# breast_cancer_detection_using_decentralisation
 
 **Version 2.0**
 
